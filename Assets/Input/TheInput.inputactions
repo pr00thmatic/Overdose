@@ -1,0 +1,71 @@
+{
+    "name": "TheInput",
+    "maps": [
+        {
+            "name": "navigation",
+            "id": "e549d4c7-cb19-41c5-9505-d1f2a68e509c",
+            "actions": [
+                {
+                    "name": "motion",
+                    "type": "PassThrough",
+                    "id": "42ef572a-dd94-478d-8bfc-4c01dffc1d62",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "63d86786-1ed2-4731-850b-5870641bedd5",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "motion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46d5f137-9fb7-4957-8a63-1ebb440a2783",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "motion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "actions",
+            "id": "9dcb1de0-1102-4ee6-b4b0-8fefc356e329",
+            "actions": [
+                {
+                    "name": "selectBed",
+                    "type": "Button",
+                    "id": "c9fb1c39-7fc9-4fcf-9ef9-bd9a28c5efad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1f1046b5-2610-4db2-a224-2dfb43f0f313",
+                    "path": "<HID::4-Axis,12-Button with POV>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "selectBed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
