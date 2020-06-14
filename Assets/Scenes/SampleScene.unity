@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c283a272dfaf5b14aa7b396e87b64b87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -735,7 +735,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 12386db5e04ca5e40832f63e79b8c41d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2300,7 +2300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f1ee0f35f032bff4aafaa992c11ac8cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2344,7 +2344,7 @@ GameObject:
   - component: {fileID: 1621318934}
   - component: {fileID: 1621318933}
   m_Layer: 0
-  m_Name: character (1)
+  m_Name: character 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,7 +2400,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: a6f2eaf5-64b1-4bd4-b63d-56e624a5c93c
-      m_Path: <HID::4-Axis,12-Button with POV>/button2
+      m_Path: <Keyboard>/x
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -2450,14 +2450,46 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: b17385f7-5b08-49e4-a6fc-2bd332039b5d
-      m_Path: <HID::4-Axis,12-Button with POV>/stick
+    - m_Name: 2D Vector
+      m_Id: 665e6001-bb59-419e-a7d2-71cc2472fde5
+      m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Motion
-      m_Flags: 0
+      m_Flags: 4
+    - m_Name: up
+      m_Id: b81e818d-0766-4a6f-b9a6-680f41c95be6
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Motion
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 21cc847b-e931-46b0-a640-13dddcab8b0d
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Motion
+      m_Flags: 8
+    - m_Name: left
+      m_Id: e1085619-0929-4524-9376-a6d43318cf1b
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Motion
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 16a90cb5-5a8a-4dca-baba-3ae55df19ff4
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Motion
+      m_Flags: 8
   run:
     m_Name: Run
     m_Type: 0
@@ -2468,7 +2500,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 23d30741-25c3-4782-852b-263c2e365786
-      m_Path: <HID::4-Axis,12-Button with POV>/trigger
+      m_Path: <Keyboard>/z
       m_Interactions: 
       m_Processors: 
       m_Groups: 
