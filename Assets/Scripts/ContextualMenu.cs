@@ -35,14 +35,17 @@ public class ContextualMenu : MonoBehaviour {
   }
 
   void Update () {
-    Vector2 rawInput = pointer.ReadValue<Vector2>();
+    Vector3 rawInput = (Vector3) pointer.ReadValue<Vector2>();
+    rawInput = (PointOfView.Right * rawInput.x +
+                PointOfView.Forward * rawInput.y);
     if (rawInput.magnitude == 0) return;
 
     if (selectedOption) {
       selectedOption.GetComponent<Animator>().SetBool("highlight", false);
     }
-    input = (Vector2.SignedAngle(new Vector2(0,1), rawInput) -
-             _degrees/2f + 360) % 360;
+    input = 360 - (Vector3.SignedAngle(new Vector3(0,0,1),
+                                       rawInput, Vector3.up) -
+                   _degrees/2f + 360) % 360;
     selectedOption = transform.GetChild(((int) Mathf.Floor(input / _degrees)) %
                                         options.Count);
     selectedOption.GetComponent<Animator>().SetBool("highlight", true);

@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 4226387873452750609}
   - component: {fileID: 5234334500313846390}
   - component: {fileID: 1868607828902041731}
+  - component: {fileID: 8600461070505536825}
   m_Layer: 0
   m_Name: bed
   m_TagString: Untagged
@@ -302,6 +303,7 @@ MonoBehaviour:
   bubble: {fileID: 8429890192546603814}
   user: {fileID: 0}
   actionIndicator: {fileID: 8852591552679362667}
+  requirement: {fileID: 1868607828902041731}
 --- !u!114 &1868607828902041731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,10 +316,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa14fd7b46ea1344b2f790254e1406a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asdf:
+    m_Name: Asdf
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 86a3eed6-0420-4635-9eaf-147aba1f98bb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  requirement:
+    icon: {fileID: 0}
+    time: 60
   indicator: {fileID: 1702637913839968681}
   timeIndicator: {fileID: 5082781474305274345}
-  current: 0
+  currentIndex: 0
   elapsed: 0
+  cryticalTimes: 0
+--- !u!114 &8600461070505536825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226387873452750610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27dbfbfe0b17f547a13a1dffc9dbd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  real: []
+  registered: []
 --- !u!1 &5522218018151049463
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ public class CharVitalSignsTaker : MonoBehaviour {
   void Update () {
     if (!detector.selectedBed ||
         detector.selectedBed.requirement.requirement.icon != vitalSignsIcon) return;
-    if (!vitalSignsMenu.Enabled) vitalSignsMenu.Build();
+    if (!vitalSignsMenu.Enabled) vitalSignsMenu.gameObject.SetActive(true);
   }
 }
