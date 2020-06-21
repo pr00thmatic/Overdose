@@ -15,6 +15,7 @@ public class CharBedDetector : MonoBehaviour {
   }
 
   void OnDisable () {
+    selectBed.Disable();
     selectBed.started -= HandleAction;
     detector.onSelectionChange -= HandleSelection;
   }

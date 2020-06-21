@@ -19,17 +19,26 @@ public class Character : MonoBehaviour {
   public RangedValue bonusSpeed;
   public RangedValue bonusDeceleration;
   public Vector3 deltaMotion;
+  public bool safetyLock = false;
 
   float _lastPush = -1;
 
-  void OnEnable () {
-    motion.Enable();
-    run.Enable();
+  void Awake () {
     run.performed += Run;
   }
 
+  void OnEnable () {
+    if (safetyLock) {
+      StartCoroutine(_Activate());
+    } else {
+      Activate();
+    }
+  }
+
   void OnDisable () {
-    run.performed -= Run;
+    motion.Disable();
+    run.Disable();
+    safetyLock = true;
   }
 
   void FixedUpdate () {
@@ -63,5 +72,15 @@ public class Character : MonoBehaviour {
       bonusSpeed.current += pushAcceleration.Lerp(1 - speed.Normalized);
     }
     _lastPush = Time.time;
+  }
+
+  public void Activate () {
+    motion.Enable();
+    run.Enable();
+  }
+  IEnumerator _Activate () {
+    yield return new WaitForSeconds(0.35f);
+    Activate();
+    safetyLock = false;
   }
 }

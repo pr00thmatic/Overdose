@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class ContextualMenu : MonoBehaviour {
   public event System.Action onBuild;
+  public event System.Action<Sprite> onSelectionConfirmed;
 
   public InputAction pointer;
   public InputAction confirmSelection;
@@ -35,6 +36,11 @@ public class ContextualMenu : MonoBehaviour {
   }
 
   void Update () {
+    UpdateConfirmSelection();
+    UpdateRadialSelection();
+  }
+
+  public void UpdateRadialSelection () {
     Vector3 rawInput = (Vector3) pointer.ReadValue<Vector2>();
     rawInput = (PointOfView.Right * rawInput.x +
                 PointOfView.Forward * rawInput.y);
@@ -49,9 +55,15 @@ public class ContextualMenu : MonoBehaviour {
     selectedOption = transform.GetChild(((int) Mathf.Floor(input / _degrees)) %
                                         options.Count);
     selectedOption.GetComponent<Animator>().SetBool("highlight", true);
+  }
 
+  public void UpdateConfirmSelection () {
     if (confirmSelection.triggered) {
+      owner.GetComponent<CharBedDetector>().Unselect();
       this.gameObject.SetActive(false);
+      if (onSelectionConfirmed != null)
+        onSelectionConfirmed(selectedOption
+                             .GetComponent<SpriteRenderer>().sprite);
     }
   }
 
