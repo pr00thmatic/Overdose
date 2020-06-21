@@ -43,7 +43,6 @@ public class RequiringBed : MonoBehaviour {
     }
 
     indicator.sprite = requirement.icon;
-    if (asdf.triggered) Meet();
   }
 
   public void Meet () {
@@ -57,6 +56,5 @@ public class RequiringBed : MonoBehaviour {
       requirement = Requirements.Instance.bucle[++currentIndex];
       elapsed = 0;
     }
-    print("meet");
   }
 }

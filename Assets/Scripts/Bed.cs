@@ -10,6 +10,7 @@ public class Bed : MonoBehaviour, ISelectable {
   public Bubble bubble;
   public CharBedDetector user;
   public GameObject actionIndicator;
+  public RequiringBed requirement;
 
   public void Select (CharBedDetector user) {
     if (this.user) return;
